@@ -1,0 +1,17 @@
+{
+  "workspacePath": "/home/faustikle/Dev/javascript/cli/capana",
+  "services": [
+    {
+      "name": "proposta",
+      "folder": "desafio-analise-credito",
+      "dockerName": "web-proposta",
+      "description": "Desafio de analise da conductor.",
+      "defaultBranch": "master",
+      "port": 5867,
+      "database": {
+        "port": 5727,
+        "dockerName": "db-proposta"
+      }
+    }
+  ]
+}
