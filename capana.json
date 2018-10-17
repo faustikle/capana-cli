@@ -1,17 +1,31 @@
 {
-  "workspacePath": "/home/faustikle/Dev/javascript/cli/capana",
-  "services": [
+  "deployBranch": "master",
+  "ambientes": [
     {
-      "name": "proposta",
-      "folder": "desafio-analise-credito",
-      "dockerName": "web-proposta",
-      "description": "Desafio de analise da conductor.",
-      "defaultBranch": "master",
-      "port": 5867,
-      "database": {
-        "port": 5727,
-        "dockerName": "db-proposta"
-      }
+      "nome": "homologacao",
+      "host": "homologacao.1a.business.com",
+      "usuarioBanco": "root",
+      "senhaBanco": "1234",
+      "services": [
+        {
+          "nome": "proposta",
+          "porta": 5867,
+          "stringConexao": "postgresql://localhost:5432/teste"
+        }
+      ]
+    },
+    {
+      "nome": "local",
+      "host": "localhost",
+      "usuarioBanco": "root",
+      "senhaBanco": "1234",
+      "services": [
+        {
+          "nome": "proposta",
+          "porta": 5867,
+          "stringConexao": "postgresql://root:@localhost:5432/teste"
+        }
+      ]
     }
   ]
 }
